@@ -1,0 +1,202 @@
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\ApplicationInsights.config
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\roslyn\csc.exe
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\roslyn\vbc.exe
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\roslyn\VBCSCompiler.exe
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\OTProyect.dll.config
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\OTProyect.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\OTProyect.pdb
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Antlr3.Runtime.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\EntityFramework.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\EntityFramework.SqlServer.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AI.Web.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.ApplicationInsights.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Newtonsoft.Json.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Owin.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.Helpers.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.Mvc.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.Optimization.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.Razor.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.WebPages.Deployment.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.WebPages.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.WebPages.Razor.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\WebGrease.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AI.Web.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.ApplicationInsights.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.Helpers.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.Mvc.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.Optimization.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.Razor.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.WebPages.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.WebPages.Deployment.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\System.Web.WebPages.Razor.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Antlr3.Runtime.pdb
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Newtonsoft.Json.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\EntityFramework.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\EntityFramework.SqlServer.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\System.Web.Helpers.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\System.Web.Mvc.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\System.Web.Optimization.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\System.Web.Razor.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\System.Web.WebPages.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\EntityFramework.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\Microsoft.Owin.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\obj\Debug\OTProyect.csprojResolveAssemblyReference.cache
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\obj\Debug\OTProyect.dll
+C:\Users\JeyJey\Documents\Visual Studio 2015\Projects\OTProyect\OTProyect\obj\Debug\OTProyect.pdb
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\ApplicationInsights.config
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\roslyn\csc.exe
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\roslyn\System.Collections.Immutable.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\roslyn\System.Reflection.Metadata.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\roslyn\vbc.exe
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\roslyn\VBCSCompiler.exe
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\roslyn\VBCSCompiler.exe.config
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\OTProyect.dll.config
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\OTProyect.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\OTProyect.pdb
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Antlr3.Runtime.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\EntityFramework.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\EntityFramework.SqlServer.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AI.DependencyCollector.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AI.Web.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AI.WindowsServer.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.ApplicationInsights.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.Google.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Web.Infrastructure.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Newtonsoft.Json.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Owin.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.Helpers.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.Mvc.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.Optimization.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.Razor.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.WebPages.Deployment.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.WebPages.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.WebPages.Razor.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\WebGrease.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AI.DependencyCollector.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AI.Web.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AI.WindowsServer.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.ApplicationInsights.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.Helpers.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.Mvc.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.Optimization.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.Razor.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.WebPages.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.WebPages.Deployment.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\System.Web.WebPages.Razor.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Antlr3.Runtime.pdb
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Newtonsoft.Json.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\EntityFramework.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\EntityFramework.SqlServer.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.Google.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\System.Web.Helpers.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\System.Web.Mvc.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\System.Web.Optimization.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\System.Web.Razor.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\System.Web.WebPages.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\EntityFramework.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csprojResolveAssemblyReference.cache
+C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.pdb
