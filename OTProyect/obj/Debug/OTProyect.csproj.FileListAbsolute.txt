@@ -197,6 +197,5 @@ C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.Facebook.re
 C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.Google.resources.dll
 C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csprojResolveAssemblyReference.cache
 C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.dll
 C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.pdb
