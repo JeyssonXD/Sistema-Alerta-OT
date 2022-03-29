@@ -25,7 +25,8 @@ namespace OTProyect
                       "~/assets/vendors/js/vendor.bundle.addons.js",
                       "~/assets/js/shared/off-canvas.js",
                       "~/assets/js/shared/misc.js",
-                      "~/assets/js/demo_1/dashboard.js"));
+                      "~/assets/js/demo_1/dashboard.js",
+                      "~/assets/js/shared/chart.js"));
         }
     }
 }
