@@ -198,8 +198,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GraficoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\VisorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -373,6 +375,8 @@
     <Content Include="assets\images\logo-mini_6.svg" />
     <Content Include="assets\images\logo-mini_7.svg" />
     <Content Include="assets\images\logo.svg" />
+    <Content Include="assets\images\logoineter.png" />
+    <Content Include="assets\images\logoineter2.png" />
     <Content Include="assets\images\logo_10.svg" />
     <Content Include="assets\images\logo_11.svg" />
     <Content Include="assets\images\logo_2.svg" />
@@ -1779,6 +1783,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Prueba.cshtml" />
+    <Content Include="Views\Visor\Index.cshtml" />
+    <Content Include="Views\Grafico\Grafico.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

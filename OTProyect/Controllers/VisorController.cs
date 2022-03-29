@@ -6,13 +6,15 @@ using System.Web.Mvc;
 
 namespace OTProyect.Controllers
 {
-    public class HomeController : Controller
+    /// <summary>
+    /// Controlador especifico para visores de mapa
+    /// </summary>
+    public class VisorController : Controller
     {
-        //Pagina de inicio del aplicaativo
+        // GET: Visor
         public ActionResult Index()
         {
             return View();
         }
-
     }
 }

@@ -199,3 +199,4 @@ C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.Twitter.res
 C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.dll
 C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.pdb
+C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csprojResolveAssemblyReference.cache
