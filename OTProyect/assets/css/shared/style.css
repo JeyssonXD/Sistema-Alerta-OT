@@ -1929,15 +1929,15 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #2196f3;
-  border-color: #2196f3; }
+  background-color: #82D570;
+  border-color: #A4DC97; }
   .btn-primary:hover {
     color: #fff;
-    background-color: #0c83e2;
-    border-color: #0c7cd5; }
+    background-color: #3F812A;
+    border-color: #6AC84C; }
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
-    background-color: #0c83e2;
+    background-color: #3F812A;
     border-color: #0c7cd5;
     box-shadow: 0 0 0 0.2rem rgba(66, 166, 245, 0.5); }
   .btn-primary.disabled, .btn-primary:disabled {
@@ -9757,7 +9757,7 @@ ul {
 .auth {
   min-height: 100vh; }
   .auth.auth-bg-1 {
-    background: url("../../images/auth/login_1.jpg");
+    background: url("../../images/auth/logg.jpg");
     background-size: cover; }
   .auth.register-bg-1 {
     background: url("../../images/auth/register.jpg") center center no-repeat;

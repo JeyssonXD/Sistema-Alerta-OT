@@ -217,7 +217,8 @@
     <Content Include="assets\css\demo_1\style.css" />
     <Content Include="assets\css\shared\style.css" />
     <Content Include="assets\fonts\Roboto\LICENSE.txt" />
-    <Content Include="assets\images\auth\login_1.jpg" />
+    <Content Include="assets\images\auth\logg.jpg" />
+    <Content Include="assets\images\auth\login_12.jpg" />
     <Content Include="assets\images\auth\login_2.jpg" />
     <Content Include="assets\images\auth\register.jpg" />
     <Content Include="assets\images\auth\register_2.jpg" />
