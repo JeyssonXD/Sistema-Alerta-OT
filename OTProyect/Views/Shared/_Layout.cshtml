@@ -24,22 +24,42 @@
                 <ul class="navbar-nav">
                     <li class="nav-item font-weight-semibold d-none d-lg-block">Sistema de Alerta Temprana</li>
                 </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
-                        <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                            <img class="img-xs rounded-circle" src="~/assets/images/faces/face8.jpg" alt="Profile image">
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                            <div class="dropdown-header text-center">
-                                <img class="img-md rounded-circle" src="~/assets/images/faces/face8.jpg" alt="Profile image">
-                                <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
-                                <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
-                            </div>
-                            <a class="dropdown-item">Mi Perfil <i class="dropdown-item-icon ti-dashboard"></i></a>
-                            <a class="dropdown-item">Cerrar Sección<i class="dropdown-item-icon ti-power-off"></i></a>
-                        </div>
-                    </li>
-                </ul>
+                @using Microsoft.AspNet.Identity
+                @if (Request.IsAuthenticated)
+                {
+
+                        <ul class="navbar-nav ml-auto ">
+                            <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
+                                <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                                    <img class="img-xs rounded-circle" src="~/assets/images/faces/face8.jpg" alt="Profile image">
+                                </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                                        <div class="dropdown-header text-center">
+                                            <img class="img-md rounded-circle" src="~/assets/images/faces/face8.jpg" alt="Profile image">
+                                            @Html.ActionLink(User.Identity.GetUserName() , "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                                        </div>
+                                       <!--formulario de cerrar sesion-->
+                                        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                                        { 
+                                            @Html.AntiForgeryToken()
+                                                <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">
+                                                    <i class="dropdown-item-icon ti-power-off"></i>
+                                                    Cerrar sesión</a>
+                                        }
+                                    </div>
+                           
+                            </li>
+                        </ul>
+                    
+                }
+                else
+                {
+                    <ul class="navbar-nav ml-auto">
+                        <li>@Html.ActionLink("Registrarse", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                        <li>@Html.ActionLink("Iniciar sesión", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                    </ul>
+                }
                 <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
                     <span class="mdi mdi-menu"></span>
                 </button>

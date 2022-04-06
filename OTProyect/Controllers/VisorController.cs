@@ -6,9 +6,11 @@ using System.Web.Mvc;
 
 namespace OTProyect.Controllers
 {
+
     /// <summary>
     /// Controlador especifico para visores de mapa
     /// </summary>
+    [Authorize]
     public class VisorController : Controller
     {
         // GET: Visor

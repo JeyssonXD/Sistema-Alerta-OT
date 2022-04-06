@@ -7,9 +7,11 @@ using System.Web.Mvc;
 
 namespace OTProyect.Controllers
 {
+
     /// <summary>
     /// Controlador especifico para Repostes
     /// </summary>
+    [Authorize]
     public class ReporteController : Controller
     {
         // GET: Reporte
