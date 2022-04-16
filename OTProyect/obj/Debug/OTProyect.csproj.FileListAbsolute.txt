@@ -303,3 +303,16 @@ C:\Git\Sistema-Alerta-OT\OTProyect\bin\roslyn\System.Reflection.Metadata.dll
 C:\Git\Sistema-Alerta-OT\OTProyect\bin\roslyn\vbc.exe
 C:\Git\Sistema-Alerta-OT\OTProyect\bin\roslyn\VBCSCompiler.exe
 C:\Git\Sistema-Alerta-OT\OTProyect\bin\roslyn\VBCSCompiler.exe.config
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Mono.Security.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Npgsql.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Npgsql.EntityFramework.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Npgsql.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\Npgsql.EntityFramework.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\de\Npgsql.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Npgsql.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\fi\Npgsql.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\fr\Npgsql.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\ja\Npgsql.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\zh-CN\Npgsql.resources.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.Migrations.FirstMigration.resources
+C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csproj.GenerateResource.Cache
