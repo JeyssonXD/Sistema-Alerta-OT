@@ -49,6 +49,9 @@ namespace OTProyect.Models
     public class LoginViewModel
     {
         [Required]
+        [Display(Name ="Nombre de Usuario")]
+        public string UserName { get; set; }
+
         [Display(Name = "Correo electrónico")]
         [EmailAddress]
         public string Email { get; set; }
@@ -64,7 +67,10 @@ namespace OTProyect.Models
 
     public class RegisterViewModel
     {
+        [Display(Name ="Nombre de Usuario")]
         [Required]
+        public string UserName { get; set; }
+
         [EmailAddress]
         [Display(Name = "Correo electrónico")]
         public string Email { get; set; }

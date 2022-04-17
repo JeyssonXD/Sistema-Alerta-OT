@@ -1,0 +1,40 @@
+﻿@model OTProyect.ViewModels.assistant.MessageResult
+
+<br/><br/>
+<section class="container">
+@switch (Model.Type)
+{
+    case OTProyect.ViewModels.assistant.MessageResult.TypeMessage.InformationSuccess:
+        <div class="jumbotron">
+            <h1><i class="mdi mdi-check-circle"></i> @Model.Title</h1>
+            <hr/>
+            <p class="lead">@Model.Message</p>
+        </div>
+        break;
+    case OTProyect.ViewModels.assistant.MessageResult.TypeMessage.InformationFail:
+        <div class="jumbotron">
+            <h1><i class="mdi mdi-alert-outline"></i>@Model.Title</h1>
+            <hr/>
+            <p class="lead">@Model.Message</p>
+        </div>
+        break;
+    case OTProyect.ViewModels.assistant.MessageResult.TypeMessage.InformationHelper:
+        <div class="jumbotron">
+            <h1><i class="mdi mdi-alert-circle"></i> @Model.Title</h1>
+            <hr/>
+            <p class="lead">@Model.Message</p>
+        </div>
+        break;
+    case OTProyect.ViewModels.assistant.MessageResult.TypeMessage.Error:
+        <div class="jumbotron">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <span class="alert-inner--icon"><i class="mdi mdi-bug"></i></span>
+                <span class="alert-inner--text"><strong>Error!</strong> @Model.Message</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+        break;
+}
+</section>

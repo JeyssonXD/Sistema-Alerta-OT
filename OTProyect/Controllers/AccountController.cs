@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using OTProyect.Models;
+using OTProyect.ViewModels.assistant;
 
 namespace OTProyect.Controllers
 {
@@ -55,6 +56,7 @@ namespace OTProyect.Controllers
         //
         // GET: /Account/Login
         [AllowAnonymous]
+        [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -65,6 +67,7 @@ namespace OTProyect.Controllers
         // POST: /Account/Login
         [HttpPost]
         [AllowAnonymous]
+        [OutputCache(NoStore = true, Duration = 0)]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
@@ -75,7 +78,7 @@ namespace OTProyect.Controllers
 
             // No cuenta los errores de inicio de sesión para el bloqueo de la cuenta
             // Para permitir que los errores de contraseña desencadenen el bloqueo de la cuenta, cambie a shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            var result = await SignInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -149,27 +152,41 @@ namespace OTProyect.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
-            if (ModelState.IsValid)
-            {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                var result = await UserManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
+            try{
+                if (ModelState.IsValid)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
-                    // Para obtener más información sobre cómo habilitar la confirmación de cuenta y el restablecimiento de contraseña, visite http://go.microsoft.com/fwlink/?LinkID=320771
-                    // Enviar correo electrónico con este vínculo
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirmar cuenta", "Para confirmar la cuenta, haga clic <a href=\"" + callbackUrl + "\">aquí</a>");
+                    //Nueva Instancia
+                    var user = new ApplicationUser { UserName = model.UserName };
+                    //Crear cuenta de usuario
+                    var result = await UserManager.CreateAsync(user, model.Password);
 
-                    return RedirectToAction("Index", "Home");
+                    //Si fue exitosa la creación de la cuenta
+                    if (result.Succeeded)
+                    {
+                        //Se ha agregado una cuenta de usuario exitosamente
+                        return View("Message", new MessageResult
+                        {
+                            Type = MessageResult.TypeMessage.InformationSuccess,
+                            Title = "Operación ejecutada exitosamente",
+                            Message = "Se ha creado exitosamente la cuenta de usuario: " + model.UserName
+                        });
+                    }
+                    AddErrors(result);
                 }
-                AddErrors(result);
-            }
 
-            // Si llegamos a este punto, es que se ha producido un error y volvemos a mostrar el formulario
-            return View(model);
+                // Si llegamos a este punto, es que se ha producido un error y volvemos a mostrar el formulario
+                return View(model);
+            }
+            catch(Exception e) {
+                //Mostrar exection no controlada
+                return View("Message", new MessageResult
+                {
+                    Type = MessageResult.TypeMessage.Error,
+                    Title = "Lo sentimos, ha ocurrido un error inesperado",
+                    Message = e.Message
+                });
+            }
+ 
         }
 
         //

@@ -31,20 +31,18 @@
                         <ul class="navbar-nav ml-auto ">
                             <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
                                 <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                                    <img class="img-xs rounded-circle" src="~/assets/images/faces/face8.jpg" alt="Profile image">
+                                    <i class="mdi mdi-account-circle"></i>@User.Identity.GetUserName()
                                 </a>
 
                                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                                        <div class="dropdown-header text-center">
-                                            <img class="img-md rounded-circle" src="~/assets/images/faces/face8.jpg" alt="Profile image">
-                                            @Html.ActionLink(User.Identity.GetUserName() , "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-                                        </div>
+
+                                        
                                        <!--formulario de cerrar sesion-->
                                         @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                                         { 
                                             @Html.AntiForgeryToken()
                                                 <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">
-                                                    <i class="dropdown-item-icon ti-power-off"></i>
+                                                    <i class="mdi mdi-logout"></i>
                                                     Cerrar sesión</a>
                                         }
                                     </div>
@@ -73,23 +71,44 @@
                     <li class="nav-item nav-profile">
                     </li>
                     <li class="nav-item nav-category">Menú</li>
+                    <!--Visor de mapas-->
                     <li class="nav-item">
                         <a class="nav-link" href="@Url.Action("Index","Visor")">
                             <i class="menu-icon typcn typcn-document-text"></i>
                             <span class="menu-title">Visor de Mapas</span>
                         </a>
                     </li>
+                    <!--Estadisticos-->
                     <li class="nav-item">
                         <a class="nav-link" href="@Url.Action("Grafico","Grafico")">
                             <i class="menu-icon typcn typcn-th-large-outline"></i>
                             <span class="menu-title">Gráficos Estadisticos</span>
                         </a>
                     </li>
+                    <!--Reportes-->
                     <li class="nav-item">
                         <a class="nav-link" href="@Url.Action("Reporte","Reporte")">
                             <i class="menu-icon typcn typcn-bell"></i>
                             <span class="menu-title">Reportes</span>
                         </a>
+                    </li>
+                    <!--Seguridad-->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                            <i class="menu-icon typcn typcn-coffee"></i>
+                            <span class="menu-title">Cuentas de usuarios</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="@Url.Action("register","account")">Registrar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Listar</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </nav>

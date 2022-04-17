@@ -229,6 +229,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\assistant\MessageResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\demo_1\style.css" />
@@ -1806,6 +1807,7 @@
     <Content Include="Views\Visor\Index.cshtml" />
     <Content Include="Views\Grafico\Grafico.cshtml" />
     <Content Include="Views\Reporte\Reporte.cshtml" />
+    <Content Include="Views\Shared\Message.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

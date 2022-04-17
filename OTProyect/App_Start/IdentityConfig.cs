@@ -46,18 +46,14 @@ namespace OTProyect
             // Configure la lógica de validación de nombres de usuario
             manager.UserValidator = new UserValidator<ApplicationUser>(manager)
             {
-                AllowOnlyAlphanumericUserNames = false,
-                RequireUniqueEmail = true
+                AllowOnlyAlphanumericUserNames = false
             };
 
             // Configure la lógica de validación de contraseñas
             manager.PasswordValidator = new PasswordValidator
             {
                 RequiredLength = 6,
-                RequireNonLetterOrDigit = true,
-                RequireDigit = true,
-                RequireLowercase = true,
-                RequireUppercase = true,
+                RequireDigit = true
             };
 
             // Configurar valores predeterminados para bloqueo de usuario

@@ -199,7 +199,6 @@ C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.Twitter.res
 C:\Github\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.dll
 C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.pdb
-C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csprojResolveAssemblyReference.cache
 C:\Git\Sistema-Alerta-OT\OTProyect\bin\ApplicationInsights.config
 C:\Git\Sistema-Alerta-OT\OTProyect\bin\OTProyect.dll.config
 C:\Git\Sistema-Alerta-OT\OTProyect\bin\OTProyect.dll
@@ -316,3 +315,4 @@ C:\Github\Sistema-Alerta-OT\OTProyect\bin\ja\Npgsql.resources.dll
 C:\Github\Sistema-Alerta-OT\OTProyect\bin\zh-CN\Npgsql.resources.dll
 C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.Migrations.FirstMigration.resources
 C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csproj.GenerateResource.Cache
+C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csprojResolveAssemblyReference.cache
