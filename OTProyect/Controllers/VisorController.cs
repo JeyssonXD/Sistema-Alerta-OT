@@ -10,7 +10,7 @@ namespace OTProyect.Controllers
     /// <summary>
     /// Controlador especifico para visores de mapa
     /// </summary>
-    [Authorize]
+    [Authorize(Roles ="Consultor")]
     public class VisorController : Controller
     {
         // GET: Visor

@@ -10,10 +10,14 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using OTProyect.Models;
 using OTProyect.ViewModels.assistant;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace OTProyect.Controllers
 {
-    [Authorize]
+    /// <summary>
+    /// Seguridad
+    /// </summary>
+    [Authorize(Roles ="Administrador")]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -163,6 +167,25 @@ namespace OTProyect.Controllers
                     //Si fue exitosa la creación de la cuenta
                     if (result.Succeeded)
                     {
+
+                        //Guardar roles
+                        var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+                        var RoleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
+
+                        foreach (var newRole in model.Roles)
+                        {
+                            if (!await RoleManager.RoleExistsAsync(newRole))
+                            {
+                                var roleResult = await RoleManager.CreateAsync(new IdentityRole(newRole));
+                                await UserManager.AddToRoleAsync(user.Id, newRole);
+                            }
+                            else
+                            {
+                                await UserManager.AddToRoleAsync(user.Id, newRole);
+                            }
+                        }
+                        
+
                         //Se ha agregado una cuenta de usuario exitosamente
                         return View("Message", new MessageResult
                         {

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using OTProyect.ViewModels.Security;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace OTProyect.Models
@@ -65,7 +67,7 @@ namespace OTProyect.Models
         public bool RememberMe { get; set; }
     }
 
-    public class RegisterViewModel
+    public class RegisterViewModel : IValidatableObject
     {
         [Display(Name ="Nombre de Usuario")]
         [Required]
@@ -85,6 +87,26 @@ namespace OTProyect.Models
         [Display(Name = "Confirmar contraseña")]
         [Compare("Password", ErrorMessage = "La contraseña y la contraseña de confirmación no coinciden.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Roles")]
+        public List<string> Roles { get; set; }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            var errores = new List<ValidationResult>();
+
+            foreach (var item in Roles)
+            {
+                if (!AccountRoles.GetRolesList().Contains(item))
+                {
+                    errores.Add(new ValidationResult(String.Concat("El rol especificado no esta definido:", item)));
+                    break;
+                }
+            }
+
+            return errores;
+        }
     }
 
     public class ResetPasswordViewModel

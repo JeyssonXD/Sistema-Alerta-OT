@@ -9,7 +9,7 @@ namespace OTProyect.Controllers
     /// <summary>
     /// Controlador especifico para graficos
     /// </summary>
-    [Authorize]
+    [Authorize(Roles ="Consultor")]
     public class GraficoController : Controller
     {
         // GET: Grafico

@@ -10,7 +10,7 @@ using OTProyect.Models;
 
 namespace OTProyect.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="Administrador")]
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;

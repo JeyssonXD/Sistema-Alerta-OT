@@ -230,6 +230,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\assistant\MessageResult.cs" />
+    <Compile Include="ViewModels\Security\AccountRoles.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\demo_1\style.css" />
@@ -554,6 +555,14 @@
     <Content Include="assets\js\shared\misc.js" />
     <Content Include="assets\js\shared\off-canvas.js" />
     <Content Include="assets\vendors\chart.js\Chart.min.js" />
+    <Content Include="assets\vendors\chosen\css\chosen-sprite%402x.png" />
+    <Content Include="assets\vendors\chosen\css\chosen-sprite.png" />
+    <Content Include="assets\vendors\chosen\css\chosen.css" />
+    <Content Include="assets\vendors\chosen\css\chosen.min.css" />
+    <Content Include="assets\vendors\chosen\js\chosen.jquery.js" />
+    <Content Include="assets\vendors\chosen\js\chosen.jquery.min.js" />
+    <Content Include="assets\vendors\chosen\js\chosen.proto.js" />
+    <Content Include="assets\vendors\chosen\js\chosen.proto.min.js" />
     <Content Include="assets\vendors\css\vendor.bundle.addons.css" />
     <Content Include="assets\vendors\css\vendor.bundle.base.css" />
     <Content Include="assets\vendors\flag-icon-css\css\flag-icon.min.css" />

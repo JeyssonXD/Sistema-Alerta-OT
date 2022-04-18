@@ -9,7 +9,7 @@ namespace OTProyect.Controllers
     /// <summary>
     /// Controlador correspondiente a la pagina de inicio del proyecto
     /// </summary>
-    [Authorize]
+    [Authorize(Roles ="Administrador,Consultor")]
     public class HomeController : Controller
     {
         //Pagina de inicio del aplicaativo

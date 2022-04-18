@@ -11,7 +11,7 @@ namespace OTProyect.Controllers
     /// <summary>
     /// Controlador especifico para Repostes
     /// </summary>
-    [Authorize]
+    [Authorize(Roles ="Consultor")]
     public class ReporteController : Controller
     {
         // GET: Reporte
