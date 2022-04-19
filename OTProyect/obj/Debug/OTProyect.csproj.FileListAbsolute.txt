@@ -285,7 +285,6 @@ C:\Git\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.Facebook.resou
 C:\Git\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.Google.resources.dll
 C:\Git\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Git\Sistema-Alerta-OT\OTProyect\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Git\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csprojAssemblyReference.cache
 C:\Git\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csproj.CoreCompileInputs.cache
 C:\Git\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csproj.CopyComplete
 C:\Git\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.dll
@@ -316,3 +315,17 @@ C:\Github\Sistema-Alerta-OT\OTProyect\bin\zh-CN\Npgsql.resources.dll
 C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.Migrations.FirstMigration.resources
 C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csproj.GenerateResource.Cache
 C:\Github\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csprojResolveAssemblyReference.cache
+C:\git\Sistema-Alerta-OT\OTProyect\bin\Mono.Security.dll
+C:\git\Sistema-Alerta-OT\OTProyect\bin\Npgsql.dll
+C:\git\Sistema-Alerta-OT\OTProyect\bin\Npgsql.EntityFramework.dll
+C:\git\Sistema-Alerta-OT\OTProyect\bin\Npgsql.xml
+C:\git\Sistema-Alerta-OT\OTProyect\bin\Npgsql.EntityFramework.xml
+C:\git\Sistema-Alerta-OT\OTProyect\bin\de\Npgsql.resources.dll
+C:\git\Sistema-Alerta-OT\OTProyect\bin\es\Npgsql.resources.dll
+C:\git\Sistema-Alerta-OT\OTProyect\bin\fi\Npgsql.resources.dll
+C:\git\Sistema-Alerta-OT\OTProyect\bin\fr\Npgsql.resources.dll
+C:\git\Sistema-Alerta-OT\OTProyect\bin\ja\Npgsql.resources.dll
+C:\git\Sistema-Alerta-OT\OTProyect\bin\zh-CN\Npgsql.resources.dll
+C:\git\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csproj.AssemblyReference.cache
+C:\git\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.Migrations.FirstMigration.resources
+C:\git\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csproj.GenerateResource.cache
