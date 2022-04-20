@@ -213,6 +213,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\GraficoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ReporteController.cs" />
     <Compile Include="Controllers\VisorController.cs" />
@@ -241,6 +242,7 @@
     <Content Include="assets\images\auth\login_2.jpg" />
     <Content Include="assets\images\auth\register.jpg" />
     <Content Include="assets\images\auth\register_2.jpg" />
+    <Content Include="assets\images\calor.png" />
     <Content Include="assets\images\carousel\banner_1.jpg" />
     <Content Include="assets\images\carousel\banner_10.jpg" />
     <Content Include="assets\images\carousel\banner_11.jpg" />
@@ -399,6 +401,7 @@
     <Content Include="assets\images\logo.svg" />
     <Content Include="assets\images\logoineter.png" />
     <Content Include="assets\images\logoineter2.png" />
+    <Content Include="assets\images\logoinetermin.svg" />
     <Content Include="assets\images\logo_10.svg" />
     <Content Include="assets\images\logo_11.svg" />
     <Content Include="assets\images\logo_2.svg" />
@@ -441,6 +444,7 @@
     <Content Include="assets\images\product_images_2\thumb_image7.jpg" />
     <Content Include="assets\images\product_images_2\thumb_image8.jpg" />
     <Content Include="assets\images\product_images_2\thumb_image9.jpg" />
+    <Content Include="assets\images\puntoscalor.png" />
     <Content Include="assets\images\samples\1280x768\1.jpg" />
     <Content Include="assets\images\samples\1280x768\10.jpg" />
     <Content Include="assets\images\samples\1280x768\11.jpg" />
@@ -539,6 +543,7 @@
     <Content Include="assets\images\sprites\logo-mini.svg" />
     <Content Include="assets\images\sprites\red.png" />
     <Content Include="assets\images\sprites\yellow.png" />
+    <Content Include="assets\images\suelo.png" />
     <Content Include="assets\images\thumb_images\thumb_image1.jpg" />
     <Content Include="assets\images\thumb_images\thumb_image2.jpg" />
     <Content Include="assets\images\thumb_images\thumb_image3.jpg" />
@@ -548,6 +553,7 @@
     <Content Include="assets\images\thumb_images\thumb_image7.jpg" />
     <Content Include="assets\images\thumb_images\thumb_image8.jpg" />
     <Content Include="assets\images\thumb_images\thumb_image9.jpg" />
+    <Content Include="assets\images\uso.png" />
     <Content Include="assets\images\weather_icons\sun.svg" />
     <Content Include="assets\images\weather_icons\sunset.svg" />
     <Content Include="assets\js\demo_1\dashboard.js" />
@@ -1817,6 +1823,8 @@
     <Content Include="Views\Grafico\Grafico.cshtml" />
     <Content Include="Views\Reporte\Reporte.cshtml" />
     <Content Include="Views\Shared\Message.cshtml" />
+    <Content Include="Views\Shared\_LayoutInicio.cshtml" />
+    <Content Include="Views\Inicio\Inicio.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
