@@ -1825,6 +1825,10 @@
     <Content Include="Views\Shared\Message.cshtml" />
     <Content Include="Views\Shared\_LayoutInicio.cshtml" />
     <Content Include="Views\Inicio\Inicio.cshtml" />
+    <Content Include="Views\Shared\_LayoutCobertura.cshtml" />
+    <Content Include="Views\Reporte\ReporteCobertura.cshtml" />
+    <Content Include="Views\Visor\VisorCobertura.cshtml" />
+    <Content Include="Views\Grafico\GraficoCobertura.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

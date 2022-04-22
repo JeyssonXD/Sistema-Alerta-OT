@@ -19,5 +19,10 @@ namespace OTProyect.Controllers
         {
             return View("Reporte");
         }
+
+        public ActionResult ReporteCobertura()
+        {
+            return View("ReporteCobertura");
+        }
     }
 }

@@ -489,7 +489,7 @@ namespace OTProyect.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Inicio", "Inicio");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

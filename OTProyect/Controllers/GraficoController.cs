@@ -17,5 +17,10 @@ namespace OTProyect.Controllers
         {
             return View("Grafico");
         }
+
+        public ActionResult GraficoCobertura()
+        {
+            return View("GraficoCobertura");
+        }
     }
 }

@@ -18,5 +18,10 @@ namespace OTProyect.Controllers
         {
             return View();
         }
+
+        public ActionResult VisorCobertura()
+        {
+            return View("VisorCobertura");
+        }
     }
 }
