@@ -1,12 +1,9 @@
 ﻿  <div class="content-wrapper">
+      <div class="row page-title-header">
+          @Html.Partial("_MenuPuntosCalorPartial")
+      </div>
         <div class="row page-title-header">
-            <div class="col-12">
-                <div class="page-header">
-                    <h4 class="page-title">Gráficos: Puntos de Calor</h4>
-                    <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
-                    </div>
-                </div>
-            </div>
+            <br />
             <div class="col-md-12">
                 <div class="page-header-toolbar">
                     <div class="btn-group toolbar-item" role="group" aria-label="Basic example">
@@ -117,8 +114,8 @@
     </div>
 
 
-<!---Scripts-->
-@section scripts{ 
-    <!-- Custom js for this page-->
-    <script src="~/assets/js/shared/chart.js"></script>
-}
+    <!---Scripts-->
+    @section scripts{
+        <!-- Custom js for this page-->
+        <script src="~/assets/js/shared/chart.js"></script>
+    }

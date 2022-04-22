@@ -326,7 +326,6 @@ C:\git\Sistema-Alerta-OT\OTProyect\bin\fi\Npgsql.resources.dll
 C:\git\Sistema-Alerta-OT\OTProyect\bin\fr\Npgsql.resources.dll
 C:\git\Sistema-Alerta-OT\OTProyect\bin\ja\Npgsql.resources.dll
 C:\git\Sistema-Alerta-OT\OTProyect\bin\zh-CN\Npgsql.resources.dll
-C:\git\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csproj.AssemblyReference.cache
 C:\git\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.Migrations.FirstMigration.resources
 C:\git\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csproj.GenerateResource.cache
 C:\Git\Proyecto\Sistema-Alerta-OT\OTProyect\bin\ApplicationInsights.config
@@ -445,3 +444,4 @@ C:\Git\Proyecto\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csproj.CoreCompi
 C:\Git\Proyecto\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csproj.CopyComplete
 C:\Git\Proyecto\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.dll
 C:\Git\Proyecto\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.pdb
+C:\Git\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csprojAssemblyReference.cache

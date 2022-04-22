@@ -1829,6 +1829,7 @@
     <Content Include="Views\Reporte\ReporteCobertura.cshtml" />
     <Content Include="Views\Visor\VisorCobertura.cshtml" />
     <Content Include="Views\Grafico\GraficoCobertura.cshtml" />
+    <Content Include="Views\Shared\_MenuPuntosCalorPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
