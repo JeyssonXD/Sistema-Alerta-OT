@@ -18,7 +18,8 @@ namespace OTProyect
                         "~/assets/css/shared/style.css",
                         "~/assets/css/demo_1/style.css",
                         "~/assets/images/favicon.ico",
-                        "~/assets/vendors/chosen/css/chosen.min.css"));
+                        "~/assets/vendors/chosen/css/chosen.min.css",
+                        "~/Content/PagedList.css"));
             
             //plugin js
             bundles.Add(new ScriptBundle("~/bundles/js").Include(

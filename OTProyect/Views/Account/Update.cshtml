@@ -1,0 +1,52 @@
+﻿@model OTProyect.ViewModels.Security.UpdateUserViewModel
+@using OTProyect.ViewModels.Security
+<br />
+<br />
+<section class="container">
+
+    <div class="card">
+        <div class="card-body">
+
+            @using (Html.BeginForm("update", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <h4><i style="font-size: 2rem;" class="mdi mdi-account"></i> Actualizar cuenta de usuario</h4>
+                <hr />
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </div>
+                </div>
+
+                <div class="form-group" style="padding:20px;">
+                    @Html.LabelFor(m => m.Roles, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.ListBoxFor(x => x.Roles, AccountRoles.GetRolesEnumerable(), new { @class = "form-control standardSelect", multiple = "multiple" })
+                        <div>@Html.ValidationMessageFor(m => m.Roles)</div>
+                    </div>
+                </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" class="btn btn-primary" value="Guardar" />
+                        </div>
+                    </div>
+            }
+
+        </div>
+    </div>
+</section>
+
+<br /><br />
+
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        //establecer estilo chosen
+        $(".standardSelect").chosen({});
+    </script>
+
+}

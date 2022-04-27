@@ -11,6 +11,10 @@ using Microsoft.Owin.Security;
 using OTProyect.Models;
 using OTProyect.ViewModels.assistant;
 using Microsoft.AspNet.Identity.EntityFramework;
+using OTProyect.ViewModels.Security;
+using System.Data.Entity;
+using PagedList;
+using System.Collections.Generic;
 
 namespace OTProyect.Controllers
 {
@@ -57,12 +61,117 @@ namespace OTProyect.Controllers
             }
         }
 
+        /// <summary>
+        /// Lista los usuarios
+        /// </summary>
+        /// <param name="sortOrder"></param>
+        /// <param name="page"></param>
+        /// <param name="search"></param>
+        /// <param name="CurrentUserName"></param>
+        /// <returns></returns>
+        public ActionResult Index(string sortOrder, int? page, DataPageUser search, string CurrentUserName)
+        {
+
+            try
+            {
+                //deaclaramos valores iniciales para ordenacion
+                ViewBag.CurrentSort = sortOrder;
+                ViewBag.Param1SortParm = String.IsNullOrEmpty(sortOrder) ? "UserName_desc" : "";
+
+                //mapear los datos sobre los filtro actuales y mantener
+                #region Map CurrentFilter
+                var currentFilter = new DataPageUser
+                {
+                    UserName = CurrentUserName
+                };
+                #endregion
+
+                //verificar pagina inicial o filtro
+                if (search.isValid() && !currentFilter.isValid())
+                {
+                    page = 1;
+                }
+                else
+                {
+                    search = currentFilter;
+                }
+
+                ViewBag.currentFilter = search;
+
+                using (var db = new ApplicationDbContext())
+                {
+                    //Predicado
+                    var query = db.Users.Include(x => x.Roles).Where(x => x.UserName != null);
+
+                    //busqueda de los datos
+                    if (ModelState.IsValid)
+                    {
+                        //Buscar por nombre
+                        if (search.UserName != null)
+                        {
+                            query = query.Where(x => x.UserName.Contains(search.UserName));
+                        }
+                    }
+
+                    ViewBag.CurrentSort = sortOrder;
+
+                    switch (sortOrder)
+                    {
+                        case "UserName_desc":
+                            query = query.OrderByDescending(s => s.UserName);
+                            break;
+                        default:
+                            query = query.OrderBy(s => s.UserName);
+                            break;
+                    }
+
+
+
+                    //page
+                    int pageSize = 10;
+                    int pageNumber = (page ?? 1);
+
+                    //View Page
+                    var ModelView = new DataPageUser
+                    {
+                        Lista = query.ToPagedList(pageNumber, pageSize)
+                    };
+
+
+                    if (search != null)
+                    {
+                        if (search.UserName != null) { ModelView.UserName = search.UserName; }
+                    }
+
+                    //count
+                    var Count = query.Count();
+                    ViewBag.Count = Count;
+
+                    return View(ModelView);
+                }
+            }
+            catch(Exception e){
+                //Mostrar exection no controlada
+                return View("Message", new MessageResult
+                {
+                    Type = MessageResult.TypeMessage.Error,
+                    Title = "Lo sentimos, ha ocurrido un error inesperado",
+                    Message = e.Message
+                });
+            }
+            
+        }
+
         //
         // GET: /Account/Login
         [AllowAnonymous]
         [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult Login(string returnUrl)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                RedirectToAction("index","home");
+            }
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -75,6 +184,11 @@ namespace OTProyect.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                RedirectToAction("index", "home");
+            }
+
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -210,6 +324,159 @@ namespace OTProyect.Controllers
                 });
             }
  
+        }
+
+        //
+        // Get: //Acount/Update
+        public ActionResult Update(string Id)
+        {
+            try
+            {
+                using (var db = new ApplicationDbContext())
+                {
+                    var Usuario = db.Users.Where(x => x.Id == Id).FirstOrDefault();
+                    if (Usuario == null)
+                    {
+                        return View("Message", new MessageResult
+                        {
+                            Type = MessageResult.TypeMessage.InformationHelper,
+                            Title = "No se encontro el usuario correspondiente",
+                            Message = "Se ha intentado buscar el usuario correspondiente, pero no se encontraron resultados"
+                        });
+                    }
+
+                    var Model = new UpdateUserViewModel
+                    {
+                        Id = Usuario.Id,
+                        UserName=Usuario.UserName
+                    };
+
+                    var roles = Usuario.Roles.ToList();
+                    List<string> RolesLista = new List<string>();
+                    foreach (var rol in roles)
+                    {
+                        var rolBd = db.Roles.Where(x => x.Id == rol.RoleId).FirstOrDefault();
+                        RolesLista.Add(rolBd.Name);
+                    }
+                    Model.Roles = RolesLista;
+                    return View(Model);
+                }
+            }
+            catch(Exception e)
+            {
+                //Mostrar exection no controlada
+                return View("Message", new MessageResult
+                {
+                    Type = MessageResult.TypeMessage.Error,
+                    Title = "Lo sentimos, ha ocurrido un error inesperado",
+                    Message = e.Message
+                });
+            }
+        }
+
+        //
+        // Post: //Acount/update
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Update(UpdateUserViewModel Model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    using (var bd = new ApplicationDbContext())
+                    {
+
+                        var usuarioIntegro = bd.Users.Where(x => x.Id == Model.Id).FirstOrDefault();
+
+                        if (usuarioIntegro == null)
+                        {
+                            //Mostrar exection no controlada
+                            return View("Message", new MessageResult
+                            {
+                                Type = MessageResult.TypeMessage.InformationFail,
+                                Title = "No encontrado",
+                                Message = "No se encontro ningun usuario correspondiente"
+                            });
+                        }
+
+                        //validar que no actulize a otro usuario
+                        var usuarioxNombre = bd.Users.Where(x => x.UserName == Model.UserName && x.Id!=Model.Id).FirstOrDefault();
+                        if (usuarioxNombre != null)
+                        {
+                            ModelState.AddModelError("UserName","No puede actualizar a otro nombre de usuario existente, intente con otro" );
+                            return View(Model);
+                        }
+
+                        List<string> RolesNew = new List<string>();
+                        List<string> RolIdDetails = new List<string>();
+                        List<string> RolNameIntegro = new List<string>();
+                        var User = UserManager.FindById(usuarioIntegro.Id);
+
+
+                        foreach (var item in User.Roles)
+                        {
+                            RolNameIntegro.Add(bd.Roles.Where(x => x.Id == item.RoleId).FirstOrDefault().Name);
+                        }
+                        //Delete
+                        foreach (var rol in RolNameIntegro)
+                        {
+
+                            if (Model.Roles.Contains(rol) == false)
+                            {
+                                RolIdDetails.Add(rol);
+                            }
+                        }
+
+                        //new
+                        foreach (var Rolnew in Model.Roles)
+                        {
+                            foreach (var RoldOld in User.Roles)
+                            {
+                                var RolnewIntegro = bd.Roles.Where(x => x.Name == Rolnew).FirstOrDefault();
+                                if (RoldOld.RoleId != RolnewIntegro.Id && Model.Roles.Contains(Rolnew) && !RolesNew.Contains(Rolnew))
+                                {
+                                    RolesNew.Add(Rolnew);
+                                }
+                            }
+                        }
+
+                        //work delete
+                        foreach (var delete in RolIdDetails.ToList())
+                        {
+                            await UserManager.RemoveFromRoleAsync(usuarioIntegro.Id, delete);
+                        }
+                        //work add
+                        foreach (var role in RolesNew)
+                        {
+                            await UserManager.AddToRoleAsync(usuarioIntegro.Id, role);
+                        }
+
+                        usuarioIntegro.UserName = Model.UserName;
+                        bd.SaveChanges();
+
+                        //Se ha agregado una cuenta de usuario exitosamente
+                        return View("Message", new MessageResult
+                        {
+                            Type = MessageResult.TypeMessage.InformationSuccess,
+                            Title = "Operación ejecutada exitosamente",
+                            Message = "Se ha actualizado exitosamente la cuenta de usuario: " + Model.UserName
+                        });
+
+                    }
+                }
+                return View(Model);
+            }
+            catch(Exception e)
+            {
+                //Mostrar exection no controlada
+                return View("Message", new MessageResult
+                {
+                    Type = MessageResult.TypeMessage.Error,
+                    Title = "Lo sentimos, ha ocurrido un error inesperado",
+                    Message = e.Message
+                });
+            }
         }
 
         //

@@ -1,0 +1,114 @@
+﻿@model OTProyect.ViewModels.Security.DataPageUser
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<br/>
+<section class="container" style="padding:-400px!important;">
+
+    <!--Información de presentación-->
+    <div class="row page-title-header">
+        <div class="col-md-12">
+            <div class="page-header-toolbar">
+                <div class="btn-group toolbar-item" role="group" aria-label="Basic example">
+                    <h3 ><i style="font-size: 2rem;color:black" class="mdi mdi-account"></i>Administrar cuentas de usuario</h3>
+                </div>
+                <div class="filter-wrapper">
+                    <a style="color:white;background-color:#6B9E62" href="@Url.Action("register","account")" class="btn btn-primary"> Regisrar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Formulario de filtro de busqueda-->
+    <div class="card">
+        <div class="card-body">
+            <div>
+                @using (Html.BeginForm("Index", "Account", FormMethod.Get))
+                {
+                    <h6 class="heading-small text-muted mb-4">Filtro de Busqueda</h6>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div id="FiltroForm" class="pl-lg-4">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-username">Nombre de usaurio</label>
+                                    @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control", Placeholder = "Nombre de Usuario" } })
+                                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div>
+                            <button type="submit"  class="btn btn-primary" style="margin: auto;display: block; background-color:#6B9E62"><i class="mdi mdi-table-search"></i> Buscar</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Cantidad total de registros: @ViewBag.Count</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <a href="@Url.Action("Index", "Account", new { sortOrder = ViewBag.Param1SortParm,   CurrentPublicID = ViewBag.currentFilter.UserName })"><b><i class="ni ni-bold-down"></i> Nombre de Usuario</b></a>
+                                </th>
+                                <th> Acciones </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Lista)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.UserName
+                                    </td>
+
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuOutlineButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Opciones </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuOutlineButton4">
+                                                <a class="dropdown-item" href="@Url.Action("Update","Account", new {Id=item.Id })"><i class="mdi mdi-account-edit"></i>Editar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    Pagina @(Model.Lista.PageCount < Model.Lista.PageNumber ? 0 : Model.Lista.PageNumber) de @Model.Lista.PageCount
+
+                                    @using OTProyect.ViewModels;
+                                    @Html.PagedListPager(Model.Lista, page => Url.Action("Index",
+                    new
+                    {
+                        page,
+                        sortOrder = ViewBag.CurrentSort,
+                        CurrentPublicID = ViewBag.currentFilter.UserName
+                    }))
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+@section scripts{
+
+
+}

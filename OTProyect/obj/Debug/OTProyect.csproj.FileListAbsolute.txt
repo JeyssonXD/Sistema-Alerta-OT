@@ -445,3 +445,7 @@ C:\Git\Proyecto\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csproj.CopyCompl
 C:\Git\Proyecto\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.dll
 C:\Git\Proyecto\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.pdb
 C:\Git\Sistema-Alerta-OT\OTProyect\obj\Debug\OTProyect.csprojAssemblyReference.cache
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\PagedList.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\PagedList.Mvc.dll
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\PagedList.xml
+C:\Github\Sistema-Alerta-OT\OTProyect\bin\PagedList.Mvc.xml
