@@ -1,5 +1,6 @@
 ﻿@Styles.Render("~/bundles/css")
 @Scripts.Render("~/bundles/js")
+@model string
 
 <div class="col-12">
     <div class="page-header">
@@ -12,13 +13,13 @@
     <div class="nav-wrapper d-flex align-items-center justify-content-between">
         <ul class="nav nav-pills d-none d-md-flex" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-                <a href="@Url.Action("index","visor")" class="nav-link active " id="pills-company-tab" data-toggle="pill"  role="button">Visor</a>
+                <a href="@Url.Action("index","visor")" class="nav-link @(Model=="Visor"?"active":"" )"  role="button">Visor</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a href="@Url.Action("Grafico","Grafico")" class="nav-link " id="pills-product-tab" data-toggle="pill"  role="button">Gráficos Estadisticos</a>
+                <a href="@Url.Action("Grafico","Grafico")" class="nav-link @(Model=="Grafico"?"active":"" )"   role="button">Gráficos Estadisticos</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a href="@Url.Action("Reporte","Reporte")" class="nav-link " id="pills-news-tab" data-toggle="pill"  role="button">Reportes</a>
+                <a href="@Url.Action("Reporte","Reporte")" class="nav-link @(Model=="Reporte"?"active":"" )"   role="button">Reportes</a>
             </li>
         </ul>
     </div>
