@@ -27,6 +27,10 @@ namespace OTProyect.ViewModels.Security
             return errors;
         }
 
+        /// <summary>
+        /// Formulario de busqueda es valido si se cumplen las condiciones especificadas
+        /// </summary>
+        /// <returns></returns>
         public bool isValid()
         {
             var bandera = false;

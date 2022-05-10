@@ -1,17 +1,8 @@
-﻿
-@{
-    ViewBag.Title = "VisorCobertura";
-    Layout = "~/Views/Shared/_LayoutCobertura.cshtml";
-}
-
-<div class="content-wrapper">
-    <!-- Page Title Header Starts-->
+﻿<div class="content-wrapper">
     <div class="row page-title-header">
-        <div class="col-12">
-            <div class="page-header">
-                <h5 class="page-title">Mapa de Cobertura y Usos de la Tierra</h5>
-            </div>
-        </div>
+        @Html.Partial("_MenuCoberturaPartial", "VisorCobertura")
+    </div>
+    <div class="row page-title-header">
     </div>
     <div class="row">
         <div class="col-md-12 grid-margin stretch-card">

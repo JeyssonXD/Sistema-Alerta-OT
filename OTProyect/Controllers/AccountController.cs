@@ -106,6 +106,7 @@ namespace OTProyect.Controllers
                     //busqueda de los datos
                     if (ModelState.IsValid)
                     {
+
                         //Buscar por nombre
                         if (search.UserName != null)
                         {
@@ -131,12 +132,12 @@ namespace OTProyect.Controllers
                     int pageSize = 10;
                     int pageNumber = (page ?? 1);
 
+
                     //View Page
                     var ModelView = new DataPageUser
                     {
                         Lista = query.ToPagedList(pageNumber, pageSize)
                     };
-
 
                     if (search != null)
                     {

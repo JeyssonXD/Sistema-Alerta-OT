@@ -3,6 +3,8 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using OTProyect.Models;
+
 
 namespace OTProyect.Models
 {
@@ -23,11 +25,12 @@ namespace OTProyect.Models
         public ApplicationDbContext()
             : base("ConnectionString", throwIfV1Schema: false)
         {
-        }
 
+        }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+        public virtual DbSet<puntoscalor> PuntosCalorModel { get; set; }
     }
 }

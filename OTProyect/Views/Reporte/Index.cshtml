@@ -1,0 +1,126 @@
+﻿@model IEnumerable<OTProyect.Models.puntoscalor>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.geom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.country_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.latitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.longitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bright_ti4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.track)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.acq_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.acq_time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.satellite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.instrument)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.confidence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.version)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bright_ti5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.frp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.daynight)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.geom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.country_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.latitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.longitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bright_ti4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.track)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.acq_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.acq_time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.satellite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.instrument)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.confidence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.version)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bright_ti5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.frp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.daynight)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.idpuntocalor }) |
+                @Html.ActionLink("Details", "Details", new { id=item.idpuntocalor }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.idpuntocalor })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
+

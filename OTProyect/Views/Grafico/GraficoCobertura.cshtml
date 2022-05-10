@@ -1,17 +1,9 @@
-﻿
-@{
-    ViewBag.Title = "GraficoCobertura";
-    Layout = "~/Views/Shared/_LayoutCobertura.cshtml";
-}
-
-<div class="content-wrapper">
+﻿<div class="content-wrapper">
+    <div class="row page-title-header">
+        @Html.Partial("_MenuCoberturaPartial", "GraficoCobertura")
+    </div>
     <div class="row page-title-header">
         <div class="col-12">
-            <div class="page-header">
-                <h4 class="page-title">Gráficos: Cobertura y Usos de la Tierra</h4>
-                <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
-                </div>
-            </div>
         </div>
         <div class="col-md-12">
             <div class="page-header-toolbar">
