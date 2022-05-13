@@ -1,30 +1,53 @@
-﻿  <div class="content-wrapper">
+﻿@model  OTProyect.ViewModels.PuntosCalor.DataChardPuntosCalor
+
+<div class="content-wrapper">
       <div class="row page-title-header">
           @Html.Partial("_MenuPuntosCalorPartial","Grafico")
       </div>
-        <div class="row page-title-header">
-            <br />
-            <div class="col-md-12">
-                <div class="page-header-toolbar">
-                    <div class="btn-group toolbar-item" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary"><i class="mdi mdi-chevron-left"></i></button>
-                        <button type="button" class="btn btn-secondary">03/02/2019 - 20/08/2019</button>
-                        <button type="button" class="btn btn-secondary"><i class="mdi mdi-chevron-right"></i></button>
-                    </div>
-                    <div class="filter-wrapper">
-                        <div class="dropdown toolbar-item">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownsorting" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Últimas 24 horas</button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownsorting">
-                                <a class="dropdown-item" href="#">Últimas 48 horas</a>
-                                <a class="dropdown-item" href="#">Últimas 72 horas</a>
+
+        <!--Formulario de filtro de busqueda-->
+        <div class="card">
+            <div class="card-body">
+                <div>
+                    @using (Html.BeginForm("Grafico", "Grafico", FormMethod.Get))
+                    {
+                        <h6 class="heading-small text-muted mb-4">Filtro de Busqueda</h6>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div id="FiltroForm" class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Fecha Inicial</label>
+                                        @{
+                                            var DateEmpty = new DateTime { };
+                                            <input name="FechaInicial" id="FechaInicial" type="date" value="@(Model.FechaInicial!=null?((DateTime)Model.FechaInicial).ToString("yyyy-MM-dd"):"")" class="form-control form-control-alternative" />
+                                        }
+                                        @Html.ValidationMessageFor(model => model.FechaInicial, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Fecha Final</label>
+                                        @{
+                                            <input name="FechaFinal" id="FechaFinal" type="date" value="@(Model.FechaFinal!=null?((DateTime)Model.FechaFinal).ToString("yyyy-MM-dd"):"")" class="form-control form-control-alternative" />
+                                        }
+                                        @Html.ValidationMessageFor(model => model.FechaFinal, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div>
+                                <button type="submit" class="btn btn-primary" style="margin: auto;display: block; background-color:#6B9E62"><i class="mdi mdi-table-search"></i> Buscar</button>
                             </div>
                         </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>
+        <br/>
         <div class="row">
-            <div class="col-md-12 grid-margin">
+            @*<div class="col-md-12 grid-margin">
                 <div class="card">
                     <div class="p-4 border-bottom bg-light">
                         <h4 class="card-title mb-0">Mixed Chart</h4>
@@ -95,11 +118,20 @@
                         <canvas id="lineChart" style="height:250px"></canvas>
                     </div>
                 </div>
-            </div>
+            </div>*@
 
 
             <div class="col-lg-6 grid-margin stretch-card">
                 <div class="card">
+                    <div class="p-4 border-bottom bg-light">
+                        <h4 class="card-title mb-0">Brillo 4</h4>
+                    </div>
+                    <div class="card-body">
+                        <input id="dataFechas" type="hidden" value="@Model.xData">
+                        <canvas id="lineChart" style="height:250px"></canvas>
+                    </div>
+                </div>
+                @*<div class="card">
                     <div class="p-4 pr-5 border-bottom bg-light d-flex justify-content-between">
                         <h4 class="card-title mb-0">Pie chart</h4>
                         <id id="pie-chart-legend" class="mr-4"></id>
@@ -107,7 +139,7 @@
                     <div class="card-body d-flex">
                         <canvas class="my-auto" id="pieChart" height="130"></canvas>
                     </div>
-                </div>
+                </div>*@
             </div>
 
         </div>
@@ -118,4 +150,113 @@
     @section scripts{
         <!-- Custom js for this page-->
         <script src="~/assets/js/shared/chart.js"></script>
+
+        <!--line chart -->
+        <script type="text/javascript">
+
+            var dd = $("#dataFechas").val();
+            console.log(dd);
+
+            if ($("#areaChart").length) {
+                var gradientStrokeFill_1 = lineChartCanvas.createLinearGradient(1, 2, 1, 280);
+                gradientStrokeFill_1.addColorStop(0, "rgba(20, 88, 232, 0.37)");
+                gradientStrokeFill_1.addColorStop(1, "rgba(255,255,255,0.4)")
+                var lineData = {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+                    datasets: [{
+                        data: [0, 205, 75, 150, 100, 150, 50, 100, 80],
+                        backgroundColor: gradientStrokeFill_1,
+                        borderColor: ChartColor[0],
+                        borderWidth: 3,
+                        fill: true,
+                        label: "Marketing"
+                    }]
+                };
+                var lineOptions = {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        filler: {
+                            propagate: false
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Month',
+                                fontSize: 12,
+                                lineHeight: 2
+                            },
+                            ticks: {
+                                autoSkip: true,
+                                autoSkipPadding: 35,
+                                maxRotation: 0,
+                                maxTicksLimit: 10,
+                                fontColor: '#212229'
+                            },
+                            gridLines: {
+                                display: false,
+                                drawBorder: false,
+                                color: 'transparent',
+                                zeroLineColor: '#eeeeee'
+                            }
+                        }],
+                        yAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Number of user',
+                                fontSize: 12,
+                                lineHeight: 2
+                            },
+                            ticks: {
+                                display: true,
+                                autoSkip: false,
+                                maxRotation: 0,
+                                stepSize: 100,
+                                min: 0,
+                                max: 300
+                            },
+                            gridLines: {
+                                drawBorder: false
+                            }
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    legendCallback: function (chart) {
+                        var text = [];
+                        text.push('<div class="chartjs-legend"><ul>');
+                        for (var i = 0; i < chart.data.datasets.length; i++) {
+                            console.log(chart.data.datasets[i]); // see what's inside the obj.
+                            text.push('<li>');
+                            text.push('<span style="background-color:' + chart.data.datasets[i].borderColor + '">' + '</span>');
+                            text.push(chart.data.datasets[i].label);
+                            text.push('</li>');
+                        }
+                        text.push('</ul></div>');
+                        return text.join("");
+                    },
+                    elements: {
+                        line: {
+                            tension: 0
+                        },
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+                var lineChartCanvas = $("#areaChart").get(0).getContext("2d");
+                var lineChart = new Chart(lineChartCanvas, {
+                    type: 'line',
+                    data: lineData,
+                    options: lineOptions
+                });
+                document.getElementById('area-traffic-legend').innerHTML = lineChart.generateLegend();
+            }
+
+        </script>
     }

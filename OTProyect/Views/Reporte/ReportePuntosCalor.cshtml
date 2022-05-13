@@ -1,0 +1,198 @@
+﻿
+
+@model OTProyect.ViewModels.PuntosCalor.DataPagePuntosCalor
+@using PagedList.Mvc;
+
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<br />
+<section class="container" style="padding:-400px!important;">
+
+    <!-- Page Title Header Starts-->
+    <div class="row page-title-header">
+        @Html.Partial("_MenuPuntosCalorPartial", "Reporte")
+    </div>
+
+    <!--Formulario de filtro de busqueda-->
+    <div class="card">
+        <div class="card-body">
+            <div>
+                @using (Html.BeginForm("Reporte", "Reporte", FormMethod.Get))
+                {
+                    <h6 class="heading-small text-muted mb-4">Filtro de Busqueda</h6>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div id="FiltroForm" class="pl-lg-4">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-username">Fecha Inicial</label>
+                                    @{
+                                        var DateEmpty = new DateTime { };
+                                        <input name="FechaInicial" id="FechaInicial" type="date" value="@(Model.FechaInicial!=null?((DateTime)Model.FechaInicial).ToString("yyyy-MM-dd"):"")" class="form-control form-control-alternative" />
+                                    }
+                                    @Html.ValidationMessageFor(model => model.FechaInicial, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-username">Fecha Final</label>
+                                    @{
+                                        <input name="FechaFinal" id="FechaFinal" type="date" value="@(Model.FechaFinal!=null?((DateTime)Model.FechaFinal).ToString("yyyy-MM-dd"):"")" class="form-control form-control-alternative" />
+                                    }
+                                    @Html.ValidationMessageFor(model => model.FechaFinal, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-username">Instrumento</label>
+                                    @Html.EditorFor(model => model.instrument, new { htmlAttributes = new { @class = "form-control", Placeholder = "Instrumento" } })
+                                    @Html.ValidationMessageFor(model => model.instrument, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-username">Satelite</label>
+                                    @Html.EditorFor(model => model.satellite, new { htmlAttributes = new { @class = "form-control", Placeholder = "Satelite" } })
+                                    @Html.ValidationMessageFor(model => model.satellite, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div>
+                            <button type="submit" class="btn btn-primary" style="margin: auto;display: block; background-color:#6B9E62"><i class="mdi mdi-table-search"></i> Buscar</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Cantidad total de registros: @ViewBag.Count</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <a href="@Url.Action("Reporte", "Reporte", new { sortOrder = ViewBag.Param1SortParm,
+                                                                        CurrentFechaInicial = ViewBag.currentFilter.FechaInicial,
+                                                                        CurrentFechaFinal = ViewBag.currentFilter.FechaFinal,
+                                                                        CurrentSatellite = ViewBag.currentFilter.satellite,
+                                                                        Currentinstrument = ViewBag.currentFilter.instrument
+                                        })"><b><i class="mdi mdi-sort"></i> Fecha</b></a>
+                                </th>
+                                <th>
+                                    País
+                                </th>
+                                <th>
+                                    Latitud
+                                </th>
+                                <th>
+                                    Longitud
+                                </th>
+                                <th>
+                                    Brillo 4
+                                </th>
+                                <th>
+                                    Trazo
+                                </th>
+                                <th>
+                                    Satelite
+                                </th>
+                                <th>
+                                    Instrumento
+                                </th>
+                                <th>
+                                    Brillo 5
+                                </th>
+                                <th>
+                                    frp
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Lista)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.fecha
+                                    </td>
+
+                                    <td>
+                                        @item.country_id
+                                    </td>
+
+                                    <td>
+                                        @item.latitude
+                                    </td>
+
+                                    <td>
+                                        @item.longitude
+                                    </td>
+
+                                    <td>
+                                        @item.bright_ti4
+                                    </td>
+
+                                    <td>
+                                        @item.track
+                                    </td>
+
+
+                                    <td>
+                                        @item.satellite
+                                    </td>
+
+                                    <td>
+                                        @item.instrument
+                                    </td>
+
+
+                                    <td>
+                                        @item.bright_ti5
+                                    </td>
+
+                                    <td>
+                                        @item.frp
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    Pagina @(Model.Lista.PageCount < Model.Lista.PageNumber ? 0 : Model.Lista.PageNumber) de @Model.Lista.PageCount
+
+                    @using OTProyect.ViewModels;
+                    @Html.PagedListPager(Model.Lista, page => Url.Action("Reporte",
+                    new
+                    {
+                        page,
+                        sortOrder = ViewBag.CurrentSort,
+                        CurrentFechaInicial = ViewBag.currentFilter.FechaInicial,
+                        CurrentFechaFinal = ViewBag.currentFilter.FechaFinal,
+                        CurrentSatellite = ViewBag.currentFilter.satellite,
+                        Currentinstrument = ViewBag.currentFilter.instrument
+                    }))
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+@section scripts{
+
+
+}

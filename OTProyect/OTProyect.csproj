@@ -54,6 +54,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="GeoAPI, Version=1.7.5.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <HintPath>..\packages\GeoAPI.Core.1.7.5\lib\net45\GeoAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="GeoAPI.CoordinateSystems, Version=1.7.5.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <HintPath>..\packages\GeoAPI.CoordinateSystems.1.7.5\lib\net45\GeoAPI.CoordinateSystems.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -91,6 +97,12 @@
       <HintPath>..\packages\Npgsql.2.2.7\lib\net45\Mono.Security.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NetTopologySuite, Version=1.15.3.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.Core.1.15.3\lib\net45\NetTopologySuite.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite.CoordinateSystems, Version=1.15.3.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.CoordinateSystems.1.15.3\lib\net45\NetTopologySuite.CoordinateSystems.dll</HintPath>
+    </Reference>
     <Reference Include="Npgsql, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.2.2.7\lib\net45\Npgsql.dll</HintPath>
       <Private>True</Private>
@@ -110,6 +122,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Spatial, Version=5.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.8.5\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -241,14 +256,25 @@
     <Compile Include="Migrations\202205030156142_Create-table-puntoscalor.designer.cs">
       <DependentUpon>202205030156142_Create-table-puntoscalor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205100440050_Create-table-PuntosCalorOficial.cs" />
+    <Compile Include="Migrations\202205100440050_Create-table-PuntosCalorOficial.designer.cs">
+      <DependentUpon>202205100440050_Create-table-PuntosCalorOficial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205110347152_EliminarColumnaPuntoCalor.cs" />
+    <Compile Include="Migrations\202205110347152_EliminarColumnaPuntoCalor.designer.cs">
+      <DependentUpon>202205110347152_EliminarColumnaPuntoCalor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PuntoCalor.cs" />
     <Compile Include="Models\puntoscalor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\assistant\MessageResult.cs" />
+    <Compile Include="ViewModels\PuntosCalor\DataChardPuntosCalor.cs" />
+    <Compile Include="ViewModels\PuntosCalor\DataPagePuntosCalor.cs" />
     <Compile Include="ViewModels\Security\AccountRoles.cs" />
     <Compile Include="ViewModels\Security\DataPageUser.cs" />
     <Compile Include="ViewModels\Security\UpdateUserViewModel.cs" />
@@ -1854,6 +1880,7 @@
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Account\Update.cshtml" />
     <Content Include="Views\Reporte\Index.cshtml" />
+    <Content Include="Views\Reporte\ReportePuntosCalor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1878,6 +1905,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205030156142_Create-table-puntoscalor.resx">
       <DependentUpon>202205030156142_Create-table-puntoscalor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205100440050_Create-table-PuntosCalorOficial.resx">
+      <DependentUpon>202205100440050_Create-table-PuntosCalorOficial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205110347152_EliminarColumnaPuntoCalor.resx">
+      <DependentUpon>202205110347152_EliminarColumnaPuntoCalor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

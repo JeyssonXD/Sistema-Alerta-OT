@@ -32,5 +32,7 @@ namespace OTProyect.Models
             return new ApplicationDbContext();
         }
         public virtual DbSet<puntoscalor> PuntosCalorModel { get; set; }
+
+        public virtual DbSet<PuntoCalor> PuntoCalor { get; set; }
     }
 }
