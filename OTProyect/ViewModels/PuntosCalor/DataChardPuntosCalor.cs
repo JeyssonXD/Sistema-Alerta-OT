@@ -9,6 +9,15 @@ namespace OTProyect.ViewModels.PuntosCalor
     public class DataChardPuntosCalor : IValidatableObject
     {
 
+        public DataChardPuntosCalor()
+        {
+            LabelDataBrillo4 = new List<string>();
+            LabelDataBrillo5 = new List<string>();
+            Brillo4 = new List<double>();
+            Brillo5 = new List<double>();
+            DatosEstadisticosConfidence = new List<DataMapCofidencePuntosCalor>();
+        }
+
         [Display(Name = "Fecha Inicial")]
         public DateTime? FechaInicial { get; set; }
 
@@ -17,13 +26,19 @@ namespace OTProyect.ViewModels.PuntosCalor
 
         #region Chard
 
-        public List<string> Titles { get; set; }
+        #region brillo
+        public List<string> LabelDataBrillo4 { get; set; }
 
-        public List<string> xData { get; set; }
+        public List<string> LabelDataBrillo5 { get; set; }
 
-        public List<float> Data1 { get; set; }
+        public List<double> Brillo4 { get; set; }
 
-        public List<float> Data2 { get; set; }
+        public List<double> Brillo5 { get; set; }
+        #endregion
+
+        #region Confianza
+        public List<DataMapCofidencePuntosCalor> DatosEstadisticosConfidence { get; set; }
+        #endregion
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

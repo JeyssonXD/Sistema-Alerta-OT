@@ -28,7 +28,6 @@ namespace OTProyect
                       "~/assets/js/shared/off-canvas.js",
                       "~/assets/js/shared/misc.js",
                       "~/assets/js/demo_1/dashboard.js",
-                      "~/assets/js/shared/chart.js",
                       "~/assets/vendors/chosen/js/chosen.jquery.min.js"));
         }
     }

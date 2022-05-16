@@ -274,6 +274,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\assistant\MessageResult.cs" />
     <Compile Include="ViewModels\PuntosCalor\DataChardPuntosCalor.cs" />
+    <Compile Include="ViewModels\PuntosCalor\DataMapCofidencePuntosCalor.cs" />
     <Compile Include="ViewModels\PuntosCalor\DataPagePuntosCalor.cs" />
     <Compile Include="ViewModels\Security\AccountRoles.cs" />
     <Compile Include="ViewModels\Security\DataPageUser.cs" />

@@ -46,6 +46,16 @@
             </div>
         </div>
         <br/>
+        <!---Brillo 4-->
+        <input id="DataBrillo4" type="hidden" value="@foreach(var item in Model.Brillo4){@(item+",")}">
+        <input id="LabelDataBrillo4" type="hidden" value="@foreach(var item in Model.LabelDataBrillo4){@(item+",")}">
+        <!---Brillo 5-->
+        <input id="DataBrillo5" type="hidden" value="@foreach(var item in Model.Brillo5){@(item+",")}">
+        <input id="LabelDataBrillo5" type="hidden" value="@foreach(var item in Model.LabelDataBrillo5){@(item+",")}">
+        <!---Confianza-->
+        <input id="DataConfianza" type="hidden" value="@foreach(var item in Model.DatosEstadisticosConfidence){@(item.confidence+",")}">
+        <input id="PorcentajeConfianza" type="hidden" value="@foreach(var item in Model.DatosEstadisticosConfidence){@(item.porcentaje+"-")}">
+        <input id="ColorConfianza" type="hidden" value="@foreach(var item in Model.DatosEstadisticosConfidence){@(item.color+",")}">
         <div class="row">
             @*<div class="col-md-12 grid-margin">
                 <div class="card">
@@ -122,54 +132,152 @@
 
 
             <div class="col-lg-6 grid-margin stretch-card">
+                <!---Brillo 4-->
                 <div class="card">
                     <div class="p-4 border-bottom bg-light">
                         <h4 class="card-title mb-0">Brillo 4</h4>
                     </div>
                     <div class="card-body">
-                        <input id="dataFechas" type="hidden" value="@Model.xData">
-                        <canvas id="lineChart" style="height:250px"></canvas>
+                        
+                        <canvas id="lineChartBrillo4" style="height:250px"></canvas>
                     </div>
                 </div>
-                @*<div class="card">
+
+            </div>
+
+            <!---Confident--->
+            <div class="col-lg-6 grid-margin stretch-card">
+                <!---Brillo 5-->
+                <div class="card">
+                    <div class="p-4 border-bottom bg-light">
+                        <h4 class="card-title mb-0">Brillo 5</h4>
+                    </div>
+                    <div class="card-body">
+
+                        <canvas id="lineChartBrillo5" style="height:250px"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
                     <div class="p-4 pr-5 border-bottom bg-light d-flex justify-content-between">
                         <h4 class="card-title mb-0">Pie chart</h4>
                         <id id="pie-chart-legend" class="mr-4"></id>
                     </div>
                     <div class="card-body d-flex">
-                        <canvas class="my-auto" id="pieChart" height="130"></canvas>
+                        <canvas class="my-auto" id="pieChartConfianza" height="130"></canvas>
                     </div>
-                </div>*@
+                </div>
             </div>
 
         </div>
     </div>
 
 
+
     <!---Scripts-->
     @section scripts{
         <!-- Custom js for this page-->
-        <script src="~/assets/js/shared/chart.js"></script>
+        @*<script src="~/assets/js/shared/chart.js"></script>*@
 
         <!--line chart -->
         <script type="text/javascript">
+            ////Begin data
+            var DataBrillo4 = $("#DataBrillo4").val();
+            var LabelDataBrillo4 = $("#LabelDataBrillo4").val();
+            var DataBrillo5 = $("#DataBrillo5").val();
+            var LabelDataBrillo5 = $("#LabelDataBrillo5").val();
+            var DataConfianza = $("#DataConfianza").val();
+            var PorcentajeConfianza = $("#PorcentajeConfianza").val();
+            var ColorConfianza = $("#ColorConfianza").val();
 
-            var dd = $("#dataFechas").val();
-            console.log(dd);
+            //arreglo para los datos de brillo 4
+            var ArrayDataBrillo4 = new Array();
+            var ArrayLabelDataBrillo4 = new Array();
+            //arreglo para los datos de brillo 5
+            var ArrayDataBrillo5 = new Array();
+            var ArrayLabelDataBrillo5 = new Array();
+            //Arreglo para los datos de confianza
+            var ArrayDataConfianza = new Array();
+            var ArrayPorcentajeConfianza = new Array();
+            var ArrayColorConfianza = new Array();
 
-            if ($("#areaChart").length) {
-                var gradientStrokeFill_1 = lineChartCanvas.createLinearGradient(1, 2, 1, 280);
-                gradientStrokeFill_1.addColorStop(0, "rgba(20, 88, 232, 0.37)");
-                gradientStrokeFill_1.addColorStop(1, "rgba(255,255,255,0.4)")
+            //procesar los datos->
+
+            //Brillo 4
+            if (DataBrillo4.split(',').length > 0) {
+                DataBrillo4.split(',').forEach(function (item, index) {
+                    if (item != '' && item != null) {
+                        ArrayDataBrillo4.push(item);
+                    }
+                })
+            }
+
+            if (LabelDataBrillo4.split(',').length > 0) {
+                LabelDataBrillo4.split(',').forEach(function (item, index) {
+                    if (item != '' && item != null) {
+                        ArrayLabelDataBrillo4.push(item);
+                    }
+                })
+            }
+
+            //Brillo 5
+            if (DataBrillo5.split(',').length > 0) {
+                DataBrillo5.split(',').forEach(function (item, index) {
+                    if (item != '' && item != null) {
+                        ArrayDataBrillo5.push(item);
+                    }
+                })
+            }
+
+            if (LabelDataBrillo5.split(',').length > 0) {
+                LabelDataBrillo5.split(',').forEach(function (item, index) {
+                    if (item != '' && item != null) {
+                        ArrayLabelDataBrillo5.push(item);
+                    }
+                })
+            }
+            //confianza
+            if (DataConfianza.split(',').length > 0) {
+                DataConfianza.split(',').forEach(function (item, index) {
+                    if (item != '' && item != null) {
+                        ArrayDataConfianza.push(item);
+                    }
+                })
+            }
+
+            if (PorcentajeConfianza.split('-').length > 0) {
+                PorcentajeConfianza.split('-').forEach(function (item, index) {
+                    if (item != '' && item != null) {
+                        
+                        ArrayPorcentajeConfianza.push(item);
+                    }
+                })
+            }
+
+            if (ColorConfianza.split(',').length > 0) {
+                ColorConfianza.split(',').forEach(function (item, index) {
+                    if (item != '' && item != null) {
+                        ArrayColorConfianza.push(item);
+                    }
+                })
+            }
+
+
+            /////End data
+
+            //graficar brillo 4
+            if ($("#lineChartBrillo4").length) {
                 var lineData = {
-                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+                    labels: ArrayLabelDataBrillo4,
                     datasets: [{
-                        data: [0, 205, 75, 150, 100, 150, 50, 100, 80],
-                        backgroundColor: gradientStrokeFill_1,
+                        data: ArrayDataBrillo4,
+                        backgroundColor: ChartColor[0],
                         borderColor: ChartColor[0],
                         borderWidth: 3,
-                        fill: true,
-                        label: "Marketing"
+                        fill: 'false',
+                        label: "Brillo 4"
                     }]
                 };
                 var lineOptions = {
@@ -185,16 +293,19 @@
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: 'Month',
+                                labelString: 'Meses',
                                 fontSize: 12,
                                 lineHeight: 2
                             },
                             ticks: {
+                                fontColor: '#212229',
+                                stepSize: 50,
+                                min: 0,
+                                max: 150,
                                 autoSkip: true,
-                                autoSkipPadding: 35,
+                                autoSkipPadding: 15,
                                 maxRotation: 0,
-                                maxTicksLimit: 10,
-                                fontColor: '#212229'
+                                maxTicksLimit: 10
                             },
                             gridLines: {
                                 display: false,
@@ -207,17 +318,18 @@
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: 'Number of user',
+                                labelString: 'Brillo 4',
                                 fontSize: 12,
                                 lineHeight: 2
                             },
                             ticks: {
+                                fontColor: '#212229',
                                 display: true,
                                 autoSkip: false,
                                 maxRotation: 0,
                                 stepSize: 100,
                                 min: 0,
-                                max: 300
+                                max: 500
                             },
                             gridLines: {
                                 drawBorder: false
@@ -249,14 +361,159 @@
                         }
                     }
                 }
-                var lineChartCanvas = $("#areaChart").get(0).getContext("2d");
+                var lineChartCanvas = $("#lineChartBrillo4").get(0).getContext("2d");
                 var lineChart = new Chart(lineChartCanvas, {
                     type: 'line',
                     data: lineData,
                     options: lineOptions
                 });
-                document.getElementById('area-traffic-legend').innerHTML = lineChart.generateLegend();
+                //document.getElementById('line-traffic-legend').innerHTML = lineChart.generateLegend();
             }
 
+
+            //graficar brillo 5
+            if ($("#lineChartBrillo5").length) {
+                var lineDataBrillo5 = {
+                    labels: ArrayLabelDataBrillo5,
+                    datasets: [{
+                        data: ArrayDataBrillo5,
+                        backgroundColor: ChartColor[0],
+                        borderColor: ChartColor[0],
+                        borderWidth: 3,
+                        fill: 'false',
+                        label: "Brillo 5"
+                    }]
+                };
+                var lineOptionsBrillo5 = {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        filler: {
+                            propagate: false
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Meses',
+                                fontSize: 12,
+                                lineHeight: 2
+                            },
+                            ticks: {
+                                fontColor: '#212229',
+                                stepSize: 50,
+                                min: 0,
+                                max: 150,
+                                autoSkip: true,
+                                autoSkipPadding: 15,
+                                maxRotation: 0,
+                                maxTicksLimit: 10
+                            },
+                            gridLines: {
+                                display: false,
+                                drawBorder: false,
+                                color: 'transparent',
+                                zeroLineColor: '#eeeeee'
+                            }
+                        }],
+                        yAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Brillo 5',
+                                fontSize: 12,
+                                lineHeight: 2
+                            },
+                            ticks: {
+                                fontColor: '#212229',
+                                display: true,
+                                autoSkip: false,
+                                maxRotation: 0,
+                                stepSize: 100,
+                                min: 0,
+                                max: 500
+                            },
+                            gridLines: {
+                                drawBorder: false
+                            }
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    legendCallback: function (chart) {
+                        var text = [];
+                        text.push('<div class="chartjs-legend"><ul>');
+                        for (var i = 0; i < chart.data.datasets.length; i++) {
+                            console.log(chart.data.datasets[i]); // see what's inside the obj.
+                            text.push('<li>');
+                            text.push('<span style="background-color:' + chart.data.datasets[i].borderColor + '">' + '</span>');
+                            text.push(chart.data.datasets[i].label);
+                            text.push('</li>');
+                        }
+                        text.push('</ul></div>');
+                        return text.join("");
+                    },
+                    elements: {
+                        line: {
+                            tension: 0
+                        },
+                        point: {
+                            radius: 0
+                        }
+                    }
+                }
+                var lineChartCanvasBrillo5 = $("#lineChartBrillo5").get(0).getContext("2d");
+                var lineChart = new Chart(lineChartCanvasBrillo5, {
+                    type: 'line',
+                    data: lineDataBrillo5,
+                    options: lineOptionsBrillo5
+                });
+                //document.getElementById('line-traffic-legend').innerHTML = lineChart.generateLegend();
+            }
+
+            ///confianza
+            if ($("#pieChartConfianza").length) {
+                var pieChartCanvas = $("#pieChartConfianza").get(0).getContext("2d");
+                var pieChart = new Chart(pieChartCanvas, {
+                    type: 'pie',
+                    data: {
+                        datasets: [{
+                            data: ArrayDataConfianza,
+                            backgroundColor: ColorConfianza,
+                            borderColor: ColorConfianza,
+                        }],
+                        labels: ArrayDataConfianza
+                    },
+                    options: {
+                        responsive: true,
+                        animation: {
+                            animateScale: true,
+                            animateRotate: true
+                        },
+                        legend: {
+                            display: false
+                        },
+                        legendCallback: function (chart) {
+                            var text = [];
+                            text.push('<div class="chartjs-legend"><ul>');
+                            for (var i = 0; i < chart.data.datasets[0].data.length; i++) {
+                                text.push('<li><span style="background-color:' + chart.data.datasets[0].backgroundColor[i] + '">');
+                                text.push('</span>');
+                                if (chart.data.labels[i]) {
+                                    text.push(chart.data.labels[i]);
+                                }
+                                text.push('</li>');
+                            }
+                            text.push('</div></ul>');
+                            return text.join("");
+                        }
+                    }
+                });
+                document.getElementById('pie-chart-legend').innerHTML = pieChart.generateLegend();
+            }
+            
         </script>
     }
