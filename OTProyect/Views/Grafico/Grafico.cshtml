@@ -162,7 +162,7 @@
             <div class="col-lg-6 grid-margin stretch-card">
                 <div class="card">
                     <div class="p-4 pr-5 border-bottom bg-light d-flex justify-content-between">
-                        <h4 class="card-title mb-0">Pie chart</h4>
+                        <h4 class="card-title mb-0">Porcentaje de Confianza %</h4>
                         <id id="pie-chart-legend" class="mr-4"></id>
                     </div>
                     <div class="card-body d-flex">
@@ -250,8 +250,7 @@
             if (PorcentajeConfianza.split('-').length > 0) {
                 PorcentajeConfianza.split('-').forEach(function (item, index) {
                     if (item != '' && item != null) {
-                        
-                        ArrayPorcentajeConfianza.push(item);
+                        ArrayPorcentajeConfianza.push(item.replace(',','.'));
                     }
                 })
             }
@@ -264,7 +263,7 @@
                 })
             }
 
-
+            console.log(ArrayPorcentajeConfianza);
             /////End data
 
             //graficar brillo 4
@@ -481,9 +480,9 @@
                     type: 'pie',
                     data: {
                         datasets: [{
-                            data: ArrayDataConfianza,
-                            backgroundColor: ColorConfianza,
-                            borderColor: ColorConfianza,
+                            data: ArrayPorcentajeConfianza,
+                            backgroundColor: ArrayColorConfianza,
+                            borderColor: ArrayColorConfianza,
                         }],
                         labels: ArrayDataConfianza
                     },
